@@ -1,8 +1,33 @@
-# tron-starter-dapp
+# Tron starter dApp
 
-## Project setup
+<p align="center">		
+  <img src="logo.PNG">		
+</p>
+
+This project was generated with [vue-cli](https://github.com/vuejs/vue-cli) version 3.2.1
+
+# Demo
+Update a value of a smart contract with your Tronlink wallet address
+
+![](demo.gif)
+
+### Install dependencies
+```
+git clone https://github.com/marlowl/vue-truffle-starter-dapp/
+```
 ```
 npm install
+```
+
+### Update the .env file
+```
+VUE_APP_SHASTA_PRIVATE_KEY="Your key"
+
+```
+### Tronbox: compile and migrate contracts
+```
+tronbox compile
+tronbox migrate --network shasta
 ```
 
 ### Compiles and hot-reloads for development
@@ -34,6 +59,3 @@ npm run test:e2e
 ```
 npm run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

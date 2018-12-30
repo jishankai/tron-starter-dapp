@@ -26,6 +26,7 @@ VUE_APP_SHASTA_PRIVATE_KEY="Your key"
 ```
 ### Tronbox: compile and migrate contracts
 ```
+npm install -g tronbox
 tronbox compile
 tronbox migrate --network shasta
 ```

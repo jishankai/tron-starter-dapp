@@ -11,20 +11,25 @@ Update a value of a smart contract with your Tronlink wallet address
 
 ![](demo.gif)
 
-### Install dependencies
+# Project setup
+A TronLink account is required for this dApp to work!
+
+Download Tronlink [here](https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec)
+
+### Clone the repo:
 ```
 git clone https://github.com/marlowl/vue-truffle-starter-dapp/
 ```
+### Install dependencies
 ```
 npm install
 ```
-
 ### Update the .env file
 ```
 VUE_APP_SHASTA_PRIVATE_KEY="Your key"
 
 ```
-### Tronbox: compile and migrate contracts
+### Tronbox: compile and migrate your own smart contracts
 ```
 npm install -g tronbox
 tronbox compile

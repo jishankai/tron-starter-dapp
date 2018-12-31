@@ -6,6 +6,8 @@
 
 This project was generated with [vue-cli](https://github.com/vuejs/vue-cli) version 3.2.1
 
+A Vue based Tron example dApp with tronweb, tronlink, tronbox and vue-cli
+
 # Demo
 Update a value of a smart contract with your Tronlink wallet address
 
@@ -16,10 +18,8 @@ A TronLink account is required for this dApp to work!
 
 Download Tronlink [here](https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec)
 
-### Clone the repo:
-```
-git clone https://github.com/marlowl/vue-truffle-starter-dapp/
-```
+Get some free test TRX coins from [here](https://www.trongrid.io/shasta/) to get some balance on your account
+
 ### Install dependencies
 ```
 npm install
@@ -27,41 +27,32 @@ npm install
 ### Update the .env file
 ```
 VUE_APP_SHASTA_PRIVATE_KEY="Your key"
-
 ```
-### Tronbox: compile and migrate your own smart contracts
-```
-npm install -g tronbox
-tronbox compile
-tronbox migrate --network shasta
-```
-
-### Compiles and hot-reloads for development
+### Run the development server
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+# Compile your own smart contracts
+Add your smart contract to the /contracts folder
+
+### Install tronbox
 ```
-npm run build
+npm install -g tronbox
 ```
 
-### Run your tests
+### Compile the contract
 ```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+tronbox compile
 ```
 
-### Run your end-to-end tests
+### Migrate the contract
 ```
-npm run test:e2e
+tronbox migrate --network shasta
 ```
-
-### Run your unit tests
+### Change the current address to your deployed contract address
 ```
-npm run test:unit
+  let contractInstance = await tronWeb
+      .contract()
+      .at("Your deployed contract address");
 ```
